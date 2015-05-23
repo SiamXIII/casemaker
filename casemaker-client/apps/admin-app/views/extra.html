@@ -1,0 +1,14 @@
+<!--<button data-ng-click="showView()">View</button>-->
+
+<div ui-i18n="ru" class="grid-wrapper">
+    <div ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav></div>
+</div>
+
+<div class="modal-wrapper" data-ng-show="addVisible">
+    <div class="underlay" data-ng-click="hideView()"></div>
+    <div class="panel over">
+        <form id="editForm">
+
+        </form>
+    </div>
+</div>

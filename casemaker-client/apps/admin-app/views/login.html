@@ -1,0 +1,16 @@
+<form role="form" class="large-4 large-offset-8 panel clearfix">
+    <div>
+        <label for="inputUsername" class="large-4 control-label">Имя пользователя</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Username" ng-model="login.email">
+    </div>
+    <div>
+        <label for="inputPassword" class="col-sm-4 control-label">Пароль</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+                   ng-model="login.password">
+    </div>
+    <div>
+        <div>
+            <button type="submit" class="right" ng-click="logIn(login.email, login.password)">Войти</button>
+        </div>
+    </div>
+</form>

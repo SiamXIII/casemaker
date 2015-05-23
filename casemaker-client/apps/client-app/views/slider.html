@@ -1,0 +1,10 @@
+<flex-slider slide="image in images track by $index"
+        class="top-slider">
+    <li>
+        <img ng-src="{{::getImageUrl(image.imageUrl, image.imageType)}}"/>
+
+        <p class="flex-caption">
+            {{::image.name}}
+        </p>
+    </li>
+</flex-slider>

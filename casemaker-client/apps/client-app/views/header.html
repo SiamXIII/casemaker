@@ -1,0 +1,67 @@
+<header>
+    <div class="hidden-for-large-up">
+        <nav class="top-bar">
+            <section class="top-bar-section wide">
+                <ul>
+                    <li class="has-dropdown small-12 medium-12">
+                        <a href="" class="small-12 medium-12">Меню</a>
+                        <ul class="dropdown small-12 medium-12">
+                            <li>
+                                <a href="/">Главная</a>
+                            </li>
+                            <li>
+                                <a href="/catalog">Каталог</a>
+                            </li>
+                            <li>
+                                <a href="/extra">Наши покупатели</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Как нас найти</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <div class="logo-section row">
+        <div class="large-4 column">
+            <div class="large-10 column">
+                <input type="search" placeholder="Поиск..." ng-model="searchString" ng-keypress="processKeypress($event)">
+            </div>
+            <div class="large-2 column search-button" ng-click="doSearch()">
+                <i class="fa fa-2x fa-search"></i>
+            </div>
+        </div>
+        <div class="large-4 large-offset-0 small-offset-1 small-10 columns">
+            <img src="images/casemaker-logo.png">
+        </div>
+        <div class="large-4 small-1 columns"></div>
+    </div>
+    <div class="hidden-for-small hidden-for-medium">
+        <nav class="top-bar">
+            <section class="top-bar-section">
+                <ul class="large-centered large-block-grid-5">
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/catalog">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="/extra">Наши покупатели</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="#">Как нас найти</a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+</header>

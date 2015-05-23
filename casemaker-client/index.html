@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="casemaker">
+<head>
+    <title>Casemaker</title>
+
+    <link href="/common/styles/reset.css" rel="stylesheet">
+    <link href="/common/styles/foundation.css" rel="stylesheet"/>
+    <link href="/common/styles/site.css" rel="stylesheet"/>
+    <link href="/apps/assets/scss/main-app/site.css" rel="stylesheet">
+    <link href="/bower_components/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/bower_components/ngDialog/css/ngDialog.min.css" rel="stylesheet">
+    <link href="/bower_components/ngDialog/css/ngDialog-theme-default.min.css" rel="stylesheet">
+    <link href="/apps/assets/scss/main-app/tweaks.css" rel="stylesheet">
+
+    <script src="/common/scripts/jquery.min.js"></script>
+    <script src="/bower_components/flexslider/jquery.flexslider-min.js"></script>
+    <script src="/common/scripts/foundation.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-flexslider/angular-flexslider.js"></script>
+    <script src="/common/scripts/angular-touch.min.js"></script>
+    <script src="/common/scripts/angular-carousel.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src="/bower_components/angular-underscore/angular-underscore.min.js"></script>
+    <script src="/bower_components/ngDialog/js/ngDialog.min.js"></script>
+
+    <script src="/apps/client-app/client-app.js"></script>
+    <script src="/apps/client-app/config.js"></script>
+    <script src="/apps/client-app/routing.js"></script>
+    <script src="/apps/client-app/services/client-service.js"></script>
+    <script src="/apps/client-app/services/images-service.js"></script>
+
+    <script src="/apps/client-app/modules/header/header.js"></script>
+    <script src="/apps/client-app/modules/slider/slider.js"></script>
+    <script src="/apps/client-app/modules/catalog/catalogCtrl.js"></script>
+    <script src="/apps/client-app/modules/catalog/categoryCtrl.js"></script>
+    <script src="/apps/client-app/modules/catalog/wareCtrl.js"></script>
+    <script src="/apps/client-app/modules/catalog/searchCtrl.js"></script>
+    <script src="/apps/client-app/modules/search/search.js"></script>
+    <script src="/apps/client-app/modules/extra/extra.js"></script>
+    <script src="/fpd/fpd.js"></script>
+
+    <script src="/apps/client-app/modules/news/news-item.js"></script>
+    <script src="/apps/client-app/modules/news/main-ctrl.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+
+<main-header></main-header>
+
+<main-slider></main-slider>
+
+<div class="underlay">
+    <div class="main-wrapper">
+        <div data-ng-view=""></div>
+    </div>
+</div>
+
+<footer class="">
+    <div class="large-10 large-offset-1">
+        <ul class="large-block-grid-5 text-center phones">
+            <li class="phone mts gray"><span>+375(33)</span> 901-56-55</li>
+            <li class="phone mts gray"><span>+375(33)</span> 612-22-22</li>
+            <li class="phone velcom gray"><span>+375(44)</span>501-56-55</li>
+            <li class="phone velcom gray"><span>+375(29)</span>612-22-78</li>
+            <li class="phone home gray"><span>8 (017)</span> 290-00-91</li>
+        </ul>
+        <div class="payments-and-social row">
+            <ul class="payments large-6 left large-block-grid-3">
+                <li>
+                    <a href="http://google.com">
+                        <div class="payment" style="background-image:url('images/payments/1.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="payment" style="background-image:url('images/payments/2.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="payment" style="background-image:url('images/payments/3.png')"></div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="social large-6 right large-block-grid-6">
+                <li>
+                    <a href="http://google.com">
+                        <div class="social-link" style="background-image:url('images/logos/F_1.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="social-link" style="background-image:url('images/logos/V_1.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="social-link" style="background-image:url('images/logos/G_1.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="social-link" style="background-image:url('images/logos/Y_1.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="social-link" style="background-image:url('images/logos/O_1.png')"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com">
+                        <div class="social-link" style="background-image:url('images/logos/I_1.png')"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

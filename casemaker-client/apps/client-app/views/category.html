@@ -1,0 +1,24 @@
+<ul class="breadcrumbs">
+    <li>
+        <a href="/catalog">Каталог</a>
+    </li>
+    <li>
+        <span>{{category.name}}</span>
+    </li>
+</ul>
+<div>
+    <h2>{{category.name}}</h2>
+
+    <p>{{category.description}}</p>
+</div>
+<ul class="large-block-grid-4 medium-block-grid-3 small-block-grid-2 catalog" ng-animate-children>
+    <li ng-repeat="item in wares" class="catalog-tile">
+        <div class="catalog-tile-underlay">
+            <a class="catalog-tile-wrapper" ng-href="{{'/catalog/' + item.category + '/' + item.key}}">
+                <img ng-src="{{::getImageUrl(item.imageUrl)}}">
+
+                <div class="catalog-tile-title">{{::item.name}}</div>
+            </a>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="casemaker-admin">
+<head>
+	<title>Admin</title>
+
+	<link href="common/styles/foundation.css" rel="stylesheet" />
+	<link href="common/styles/site.css" rel="stylesheet" />
+	<link href="common/styles/ui-grid.min.css" rel="stylesheet" />
+	<link href="apps/assets/scss/admin-app/admin.css" rel="stylesheet">
+
+	<script src="common/scripts/jquery-1.11.3.js"></script>
+	<script src="common/scripts/angular.js"></script>
+	<script src="common/scripts/foundation.min.js"></script>
+
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="common/scripts/ui-grid.min.js"></script>
+	<script src="common/scripts/oi.file.js"></script>
+
+	<script src="apps/admin-app/admin-app.js"></script>
+	<script src="apps/admin-app/config.js"></script>
+	<script src="apps/admin-app/auth.js"></script>
+	<script src="apps/admin-app/routing.js"></script>
+	<script src="apps/admin-app/services/admin-service.js"></script>
+	<script src="apps/admin-app/services/images-service.js"></script>
+
+	<script src="apps/admin-app/modules/wares/waresCtrl.js"></script>
+	<script src="apps/admin-app/modules/categories/categoriesCtrl.js"></script>
+	<script src="apps/admin-app/modules/orders/ordersCtrl.js"></script>
+	<script src="apps/admin-app/modules/slides/slidesCtrl.js"></script>
+	<script src="apps/admin-app/modules/promos/promosCtrl.js"></script>
+	<script src="apps/admin-app/modules/extra/extraCtrl.js"></script>
+</head>
+<body data-ng-controller="AdminUserCtrl">
+	<nav class="top-bar with-logo">
+		<ul class="title-area">
+			<li class="name"><h1><a href="#">Admin</a></h1></li>
+			<li class="toggle-topbar menu-icon"></li>
+		</ul>
+
+		<section class="top-bar-section">
+			<ul class="right">
+				<li class="divider"></li>
+				<li>
+					<a href="#/extra">Розыгрыш</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#/promos">Новости</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#/wares">Товары</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#/categories">Категории</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#/slides">Слайдшоу</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#/orders">Заказы</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="#" data-ng-click="logout()">Выйти</a>
+				</li>
+			</ul>
+		</section>
+	</nav>
+
+	<div data-ng-view=""></div>
+</body>
+</html>

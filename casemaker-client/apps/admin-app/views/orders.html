@@ -1,0 +1,50 @@
+﻿<div>
+    <div class="button">Добавить</div>
+    <button data-ng-click="showEdit()" data-ng-disabled="!cellSelected">Просмотреть</button>
+    <div ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav></div>
+</div>
+
+<div class="modal-wrapper" data-ng-show="addVisible">
+    <div class="underlay" data-ng-click="hideAdd()"></div>
+    <div class="panel over">
+        <form data-ng-submit="saveItem()" id="editForm">
+            <label class="left">Номер заказа</label>
+            <input type="text" data-ng-model="add.orderNum" disabled>
+            <label class="left">Товар</label>
+            <input type="text" data-ng-model="add._ware.name" disabled>
+            <label class="left">Дата заказа</label>
+            <input type="text" data-ng-model="add.orderDate | date: 'dd.mm.yyyy HH:mm'" disabled>
+            <label class="left">Адрес доставки</label>
+            <input type="text" data-ng-model="add.shippingAddress" disabled>
+            <label class="left">E-mail</label>
+            <input type="email" data-ng-model="add.eMail" disabled>
+            <label class="left">Телефон</label>
+            <input type="tel" data-ng-model="add.phone" disabled>
+            <label class="left">Цена</label>
+            <input type="tel" data-ng-model="add.price" disabled>
+            <label class="left">Статус</label>
+            <select data-ng-model="add.status">
+                <option value="Submitted">Ожидает обработки</option>
+                <option value="Canceled">Отменен</option>
+                <option value="Shipped">Отправлен</option>
+            </select>
+
+            <label class="left">Изображения</label>
+
+            <div class="clearfix"></div>
+            <div class="order-images">
+                <img ng-src="{{getImageUrl(add.imageId+'.png')}}" ng-if="add.imageId" class="left large-4">
+
+                <img ng-src="{{getImageUrl(image)}}" ng-if="add.imageId" class="left large-4"
+                     data-ng-repeat="image in add.customImages">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="button-group right">
+                <button type="submit" class="success">Ok</button>
+                <button type="button" class="cancel" data-ng-click="hideAdd()">Закрыть</button>
+            </div>
+        </form>
+    </div>
+</div>

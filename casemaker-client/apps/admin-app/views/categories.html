@@ -1,0 +1,36 @@
+<button data-ng-click="showAdd()">Добавить</button>
+<button data-ng-click="showEdit()" data-ng-disabled="!cellSelected">Редактировать</button>
+<button data-ng-click="deleteItem()" data-ng-disabled="!cellSelected">Удалить</button>
+
+<div ui-i18n="ru" class="grid-wrapper">
+    <div ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav></div>
+</div>
+
+<div class="modal-wrapper" data-ng-show="addVisible">
+    <div class="underlay" data-ng-click="hideAdd()"></div>
+    <div class="panel over">
+        <form data-ng-submit="saveItem()" id="editForm">
+            <label class="left">Название</label>
+            <input type="text" data-ng-model="add.name" required>
+
+            <label class="left">Ключ</label>
+            <textarea data-ng-model="add.key" required></textarea>
+
+            <label class="left">Описание</label>
+            <textarea data-ng-model="add.description" required></textarea>
+
+            <div class="clearfix"></div>
+            <label class="left">Изображение</label>
+            <input type="file" oi-file="options">
+
+            <img ng-src="{{getImageUrl(add.imageUrl, add.imageType)}}" ng-if="add.imageUrl" class="left large-4">
+
+            <div class="clearfix"></div>
+
+            <div class="button-group right">
+                <button type="submit" class="success">Сохранить</button>
+                <button type="button" class="cancel" data-ng-click="hideAdd()">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>

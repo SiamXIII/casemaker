@@ -1,0 +1,11 @@
+<ul class="large-block-grid-4 medium-block-grid-3 small-block-grid-2 catalog" ng-animate-children>
+    <li ng-repeat="item in photos" class="catalog-tile">
+        <div class="catalog-tile-underlay">
+            <div class="catalog-tile-wrapper" ng-click="showFull(item)">
+                <img ng-src="{{::item.images.standard_resolution.url}}">
+
+                <div class="catalog-tile-title">{{::item.user.full_name}}</div>
+            </div>
+        </div>
+    </li>
+</ul>

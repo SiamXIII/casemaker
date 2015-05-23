@@ -1,0 +1,36 @@
+<ul class="breadcrumbs">
+    <li>
+        <span>Каталог</span>
+    </li>
+</ul>
+<div>
+    <ul class="large-block-grid-4 medium-block-grid-3 small-block-grid-2 catalog" ng-animate-children>
+        <li ng-repeat="item in categories" class="catalog-tile">
+            <div class="catalog-tile-underlay">
+                <a class="catalog-tile-wrapper" ng-href="{{'/catalog/' + item.key}}">
+                    <img ng-src="{{::getImageUrl(item.imageUrl)}}">
+
+                    <div class="catalog-tile-title">{{::item.name}}</div>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="modal-wrapper" data-ng-show="false">
+    <div class="underlay" data-ng-click="hideForm()"></div>
+    <div class="panel over clearfix">
+        <form data-ng-submit="orderWare()" id="orderInfo">
+            <label class="left">Адрес доставки</label>
+            <input type="text" data-ng-model="order.shippingAddress" required>
+
+            <label class="left">Телефон</label>
+            <input type="tel" data-ng-model="order.phone" required>
+
+            <label class="left">E-mail</label>
+            <input type="email" data-ng-model="order.eMail" required>
+
+            <button type="submit" class="right">Заказать</button>
+        </form>
+    </div>
+</div>

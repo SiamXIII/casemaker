@@ -1,0 +1,6 @@
+﻿{
+	"port": 1337,
+	"mongoose": {
+		"uri": "mongodb://localhost/casemaker"
+	}
+}

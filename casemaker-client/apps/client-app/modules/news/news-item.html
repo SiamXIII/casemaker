@@ -1,0 +1,12 @@
+<li class="news-wrapper">
+    <div class="large-12 news-tile" ng-click="toggleInfo()">
+        <img class="news-tile-image" ng-src="{{::getImageUrl(promo.imageUrl)}}">
+
+        <h2 class="news-tile-header">{{promo.title}}</h2>
+    </div>
+    <div class="large-12 news-info" ng-show="infoVisible">
+        <p class="news-info-description">{{promo.description}}</p>
+        <a class="news-info-link right" ng-if='promo.link' ng-href="{{promo.link}}">Details</a>
+        <div class="clearfix"></div>
+    </div>
+</li>

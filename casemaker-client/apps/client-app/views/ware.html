@@ -1,0 +1,46 @@
+<ul class="breadcrumbs">
+    <li>
+        <a href="/catalog">Каталог</a>
+    </li>
+    <li>
+        <a ng-href="{{ '/catalog/' + category.key }}">{{category.name}}</a>
+    </li>
+    <li>
+        <span>{{ware.name}}</span>
+    </li>
+</ul>
+
+<h2>{{::ware.name}}</h2>
+
+<div>
+    <img ng-src="{{::getImageUrl(ware.imageUrl)}}" ng-if="ware.imageUrl" class="column large-4">
+
+    <div class="column large-8 small-12">
+        <div>{{::ware.description}}</div>
+        <div class="right">
+            <label class="ware-price text-right">Цена: {{::ware.price}} руб.</label>
+            <button class="column large-12" data-ng-click="designWare()" data-ng-if="ware.isDesignable">
+                Дизайн
+            </button>
+            <button class="column large-12" data-ng-click="showOrderForm()" data-ng-if="!ware.isDesignable">
+                Заказать
+            </button>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div>
+    <ul class="thumbnails row">
+        <li ng-repeat="addedImage in ware.additionalImages" class="left large-2 small-4">
+            <div class="thumbnails-tile-underlay">
+                <img ng-src="{{getImageUrl(addedImage.imageUrl,addedImage.imageType)}}"
+                     ng-if="addedImage.imageUrl"
+                     data-ng-click="setFullImage(addedImage)">
+            </div>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+    <div class="full-image large-text-center">
+        <img ng-src="{{getImageUrl(fullImage.imageUrl)}}" data-ng-if="fullImage">
+    </div>
+</div>

@@ -1,0 +1,122 @@
+@import "header";
+@import "../foundation/app";
+@import "catalog";
+@import "news";
+@import "extras";
+
+$slider-title-color: rgba(0, 0, 0, 0.7);
+$primary-color: #9400D3;
+$secondary-color: #eaeaea;
+
+html {
+  overflow-x: hidden;
+}
+
+button {
+  margin: 10px;
+}
+
+.logo-section {
+  img {
+    width: 100%;
+  }
+
+  .search-button {
+    padding-left: 0 !important;
+
+    .fa-search {
+      color: lightgrey;
+
+      &:hover {
+        cursor: pointer;
+        color: grey;
+      }
+    }
+  }
+}
+
+.underlay {
+  @extend .clearfix;
+  background-color: $primary-color;
+}
+
+.main-wrapper {
+  @extend .large-10;
+  @extend .large-offset-1;
+  @extend .column;
+  background-color: white;
+  padding: 20px 10px;
+}
+
+nav.top-bar {
+  text-align: center;
+
+  section.top-bar-section {
+    display: inline-block;
+    width: 83.33333%;
+
+    &.wide {
+      width: 100%;
+    }
+
+    li {
+      background-color: $secondary-color;
+      padding-bottom: 0;
+    }
+  }
+}
+
+footer {
+  padding-top: 30px;
+  background-color: $secondary-color;
+
+  .phones {
+    .phone {
+      &:before {
+        margin-right: 5px;
+        background-size: contain;
+        position: relative;
+        top: 3px;
+      }
+
+      &.velcom.gray:before {
+        content: url('../../../../images/velcom-gray.png');
+      }
+
+      &.mts.gray:before {
+        content: url('../../../../images/mts-gray.png');
+      }
+
+      &.home.gray:before {
+        content: url('../../../../images/home-gray.png');
+      }
+    }
+  }
+
+  .payments {
+    .payment {
+      width: 80px;
+      height: 32px;
+      overflow: hidden;
+      background-position: 0 32px;
+
+      &:hover {
+        background-position: 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .social {
+    .social-link {
+      width: 32px;
+      height: 32px;
+      background-position: 0 32px;
+
+      &:hover {
+        background-position: 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

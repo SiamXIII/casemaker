@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="fpd/css/main.css">
+
+<!-- Google Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Gorditas' rel='stylesheet' type='text/css'>
+
+<!-- jQuery UI - required -->
+<link href="fpd/css/jquery-ui.css" rel="stylesheet"/>
+<!-- Custom iconic font - required -->
+<link href="fpd/css/icon-font.css" rel="stylesheet"/>
+<!-- External plugins css - required -->
+<link rel="stylesheet" type="text/css" href="fpd/css/plugins.min.css"/>
+<!-- The CSS for the plugin itself - required -->
+<link rel="stylesheet" type="text/css" href="fpd/css/jquery.fancyProductDesigner.css"/>
+<!-- Optional - only when you would like to use custom fonts - optional -->
+<link rel="stylesheet" type="text/css" href="fpd/css/jquery.fancyProductDesigner-fonts.css"/>
+
+<!-- Include js files -->
+<script src="fpd/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="fpd/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- HTML5 canvas library - required -->
+<script src="fpd/js/fabric.js" type="text/javascript"></script>
+<!-- The plugin itself - required -->
+<script src="fpd/js/jquery.fancyProductDesigner.js" type="text/javascript"></script>
+<script src="fpd/js/plugins.js" type="text/javascript"></script>
+
+<div id="main-container">
+    <div id="case-designer" class="fpd-shadow-1">
+        <div class="fpd-product" title="Casemaker" data-thumbnail="{{ware}}">
+            <img ng-src="{{ware}}" title="Case"
+                 data-parameters='{"autoCenter": true, "draggable": false}'/>
+            <img ng-src="{{overlay}}" title="Base"
+                 data-parameters='{"autoCenter": true, "topped": true, "draggable": false}'/>
+            <img ng-src="{{details}}" title="Details"
+                 data-parameters='{"autoCenter": true, "topped": true, "draggable": false}'/>
+        </div>
+
+    </div>
+</div>
+<br/>
+
+<button class="right" data-ng-click="orderProduct()">Order</button>
+<button class="right" data-ng-click="hideForm()">Cancel</button>
+<button class="right" data-ng-click="save()">Save</button>
+
+<!-- The form recreation -->
+<input type="file" id="design-upload" style="display: none;"/>
+
+<form action="php/recreation.php" id="recreation-form" method="post">
+    <input type="hidden" name="recreation_product" value=""/>
+</form>
+
+</div>

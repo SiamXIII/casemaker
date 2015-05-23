@@ -1,0 +1,8 @@
+casemaker-server/node_modules/
+casemaker-client/bower_components/
+casemaker-server/.ntvs_analysis.dat
+casemaker-server/.ntvs_analysis.dat.tmp
+casemaker-server/obj/
+.idea/
+casemaker-client/App_Data/PublishProfiles/casemaker.pubxml
+casemaker-client/website.publishproj
