@@ -2,7 +2,7 @@ angular.module('casemaker')
     .directive('mainSlider', function () {
         return {
             restrict: 'E',
-            templateUrl: '/apps/client-app/views/slider.html',
+            templateUrl: '/casemaker-client/apps/client-app/views/slider.html',
             scope: {},
             controller: function ($scope, Slides, ImagesService) {
                 $scope.images = Slides.get();

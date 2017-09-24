@@ -2,7 +2,7 @@ angular.module('casemaker')
     .directive('newsItem', function () {
         return {
             restrict: 'E',
-            templateUrl: '/apps/client-app/modules/news/news-item.html',
+            templateUrl: '/casemaker-client/apps/client-app/modules/news/news-item.html',
             scope: {
                 promo: '='
             },

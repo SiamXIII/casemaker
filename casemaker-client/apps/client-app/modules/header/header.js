@@ -2,7 +2,7 @@ angular.module('casemaker')
     .directive('mainHeader', function () {
         return {
             restrict: 'E',
-            templateUrl: '/apps/client-app/views/header.html',
+            templateUrl: '/casemaker-client/apps/client-app/views/header.html',
             controller: function ($scope, $location, $route) {
                 $scope.doSearch = function () {
                     $location.url('/search');

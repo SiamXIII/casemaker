@@ -11,7 +11,7 @@
                     outputStyle: 'compressed'
                 },
                 files: {
-                    'apps/assets/scss/main-app/site.css': 'apps/assets/scss/main-app/site.scss'
+                    'casemaker-client/apps/assets/scss/main-app/site.css': 'casemaker-client/apps/assets/scss/main-app/site.scss'
                 }
             }
         },

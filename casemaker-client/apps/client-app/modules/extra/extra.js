@@ -7,7 +7,7 @@ angular.module('casemaker')
 
         $scope.showFull = function (image) {
             ngDialog.open({
-                template: '/apps/client-app/templates/popup.html',
+                template: '/casemaker-client/apps/client-app/templates/popup.html',
                 data: image
             });
         }
