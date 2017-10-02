@@ -221,7 +221,7 @@ app.post('/api/slides', function (req, res) {
 app.post('/api/promos', function (req, res) {
     var item = req.body;
 
-    slidesRepo.savePromo(item, function (result) {
+    promosRepo.savePromo(item, function (result) {
         res.send(result);
     });
 });
@@ -288,7 +288,7 @@ app.delete('/api/slides', function (req, res) {
 });
 
 app.delete('/api/promos', function (req, res) {
-    servicesRepo.deletePromo(req.query.id, function () {
+    promosRepo.deletePromo(req.query.id, function () {
         res.send('Success');
     });
 });
