@@ -31,8 +31,8 @@
 		}
 	});
 })
-.factory('Promos', function ($resource, CONFIG) {
-	return $resource(CONFIG.serverUrl + "/api/promos/:params", {}, {
+.factory('Services', function ($resource, CONFIG) {
+	return $resource(CONFIG.serverUrl + "/api/services/:params", {}, {
 		get: {
 			method: 'GET',
 			isArray: true

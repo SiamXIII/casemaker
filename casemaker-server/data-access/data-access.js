@@ -5,7 +5,7 @@ var Ware = require('./models/ware.js');
 var Category = require('./models/category');
 var Slide = require('./models/slide');
 var Order = require('./models/order');
-var Promo = require('./models/promo');
+var Service = require('./models/service');
 
 mongoose.connect(config.get('mongoose:uri'));
 
@@ -15,4 +15,4 @@ module.exports.Wares = Ware;
 module.exports.Categories = Category;
 module.exports.Slides = Slide;
 module.exports.Orders = Order;
-module.exports.Promos = Promo;
+module.exports.Services = Service;

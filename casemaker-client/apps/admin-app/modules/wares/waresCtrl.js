@@ -13,10 +13,10 @@
             enableVerticalScrollbar: 1,
             columnDefs: [
                 {name: '_id', visible: false},
-                {name: 'name', enableCellEditOnFocus: false},
-                {name: 'category', enableCellEditOnFocus: false},
-                {name: 'description', enableCellEditOnFocus: false},
-                {name: 'price', enableCellEditOnFocus: false}
+                {name: 'name', enableCellEditOnFocus: false, displayName: 'Название'},
+                {name: 'category', enableCellEditOnFocus: false, displayName: 'Категория'},
+                {name: 'description', enableCellEditOnFocus: false, displayName: 'Описание'},
+                {name: 'price', enableCellEditOnFocus: false, displayName: 'Цена'}
             ],
             columnVirtualizationThreshold: 20,
             enableCellEditOnFocus: true,

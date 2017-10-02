@@ -12,9 +12,9 @@ angular.module('casemaker-admin')
             enableVerticalScrollbar: 1,
             columnDefs: [
                 {name: '_id', visible: false},
-                {name: 'name', enableCellEditOnFocus: false},
-                {name: 'key', enableCellEditOnFocus: false},
-                {name: 'description', enableCellEditOnFocus: false}
+                {name: 'name', enableCellEditOnFocus: false, displayName: 'Название'},
+                {name: 'key', enableCellEditOnFocus: false, displayName: 'Ключ'},
+                {name: 'description', enableCellEditOnFocus: false, displayName: 'Описание'}
             ],
             columnVirtualizationThreshold: 20,
             enableCellEditOnFocus: true,
