@@ -2,12 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Schemas
-var Service = new Schema({
+var Promo = new Schema({
     '_id': Schema.ObjectId,
-    'title': String,
+    'name': String,
     'imageUrl': String,
     'imageType': String,
-    'link': String
 });
 
-module.exports = mongoose.model('Service', Service);
+module.exports = mongoose.model('Promo', Promo);
+/**
+ * Created by Siam on 5/30/2015.
+ */

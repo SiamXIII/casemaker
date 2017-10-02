@@ -1,0 +1,29 @@
+<button data-ng-click="showAdd()">Добавить</button>
+
+<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3" ng-if="data.length">
+    <li ng-repeat="image in data">
+        <div class="image-tile">
+            <img ng-src="{{::getImageUrl(image.imageUrl, image.imageType)}}">
+
+            <div class="close-button" data-ng-click="removeItem($index)"></div>
+        </div>
+    </li>
+</ul>
+
+<div class="modal-wrapper" data-ng-show="addVisible">
+    <div class="underlay" data-ng-click="hideAdd()"></div>
+    <div class="panel over">
+        <form data-ng-submit="addItem()" id="editForm">
+            <label class="left">Название</label>
+            <input type="text" data-ng-model="add.name" required>
+
+            <label class="left">Изображение</label>
+            <input type="file" oi-file="options">
+
+            <div class="button-group right">
+                <button type="submit" class="success">Сохранить</button>
+                <button type="button" class="cancel" data-ng-click="hideAdd()">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>

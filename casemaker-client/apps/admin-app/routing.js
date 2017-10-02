@@ -25,6 +25,11 @@
             templateUrl: 'apps/admin-app/views/slides.html',
             access: { requiredLogin: true }
         });
+        $routeProvider.when('/promos', {
+            controller: 'promosCtrl',
+            templateUrl: 'apps/admin-app/views/promos.html',
+            access: { requiredLogin: true }
+        });
         $routeProvider.when('/services', {
             controller: 'servicesCtrl',
             templateUrl: 'apps/admin-app/views/services.html',

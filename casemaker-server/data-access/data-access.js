@@ -4,6 +4,7 @@ var config = require('../config/config.js');
 var Ware = require('./models/ware.js');
 var Category = require('./models/category');
 var Slide = require('./models/slide');
+var Promo = require('./models/promo');
 var Order = require('./models/order');
 var Service = require('./models/service');
 
@@ -16,3 +17,4 @@ module.exports.Categories = Category;
 module.exports.Slides = Slide;
 module.exports.Orders = Order;
 module.exports.Services = Service;
+module.exports.Promos = Promo;

@@ -130,6 +130,18 @@ app.get('/api/slides', function (req, res) {
 });
 
 app.get('/api/services', function (req, res) {
+    servicesRepo.getAllServices(function (err, data) {
+        if (!err) {
+            return res.send(data);
+        } else {
+            res.statusCode = 500;
+            log.error('Internal error(%d): %s', res.statusCode, err.message);
+            return res.send({error: 'Server error'});
+        }
+    });
+});
+
+app.get('/api/services', function (req, res) {
     servicesRepo.getServices(function (err, data) {
         if (!err) {
             return res.send(data);
@@ -200,6 +212,14 @@ app.post('/api/slides', function (req, res) {
     });
 });
 
+app.post('/api/services', function (req, res) {
+    var item = req.body;
+
+    servicesRepo.saveService(item, function (result) {
+        res.send(result);
+    });
+});
+
 app.post('/api/upload', function (req, res) {
     var form = new multiparty.Form();
 
@@ -249,6 +269,12 @@ app.post('/api/uploadImage', function (req, res) {
 
 app.delete('/api/slides', function (req, res) {
     slidesRepo.deleteSlide(req.query.id, function () {
+        res.send('Success');
+    });
+});
+
+app.delete('/api/services', function (req, res) {
+    servicesRepo.deleteService(req.query.id, function () {
         res.send('Success');
     });
 });
