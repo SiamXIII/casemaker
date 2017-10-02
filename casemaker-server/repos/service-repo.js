@@ -1,4 +1,4 @@
-var servicesDataAccess = require('../data-access/data-access.js').services;
+var servicesDataAccess = require('../data-access/data-access.js').Services;
 var ObjectID = require('mongodb').ObjectID;
 
 var instance = {
