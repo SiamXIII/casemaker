@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic);
+
 @import "header";
 @import "../foundation/app";
 @import "catalog";
@@ -12,59 +14,26 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+
 button {
   margin: 10px;
 }
 
-.logo-section {
-  img {
-    width: 100%;
-  }
-
-  .search-button {
-    padding-left: 0 !important;
-
-    .fa-search {
-      color: lightgrey;
-
-      &:hover {
-        cursor: pointer;
-        color: grey;
-      }
-    }
-  }
-}
-
-.underlay {
-  @extend .clearfix;
-  background-color: $primary-color;
-}
-
 .main-wrapper {
-  @extend .large-10;
-  @extend .large-offset-1;
-  @extend .column;
-  background-color: white;
-  padding: 20px 10px;
-}
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 
-nav.top-bar {
-  text-align: center;
-
-  section.top-bar-section {
-    display: inline-block;
-    width: 83.33333%;
-
-    &.wide {
-      width: 100%;
-    }
-
-    li {
-      background-color: $secondary-color;
-      padding-bottom: 0;
-    }
+  .flexslider {
+    border: none;
   }
 }
+
+
 
 footer {
   padding-top: 30px;

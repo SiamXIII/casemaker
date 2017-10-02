@@ -8,10 +8,9 @@
             },
             dist: {
                 options: {
-                    outputStyle: 'compressed'
                 },
                 files: {
-                    'casemaker-client/apps/assets/scss/main-app/site.css': 'casemaker-client/apps/assets/scss/main-app/site.scss'
+                    'apps/assets/scss/main-app/site.css': 'apps/assets/scss/main-app/site.scss'
                 }
             }
         },
@@ -25,7 +24,7 @@
             },
 
             sass: {
-                files: 'scss/**/*.scss',
+                files: 'apps/assets/scss/**/*.scss',
                 tasks: ['sass']
             }
         }
@@ -35,5 +34,5 @@
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('build', ['sass']);
-    grunt.registerTask('default', ['build','watch']);
+    grunt.registerTask('default', ['build','watch:sass']);
 };
