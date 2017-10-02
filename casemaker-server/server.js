@@ -131,7 +131,7 @@ app.get('/api/slides', function (req, res) {
 });
 
 app.get('/api/promos', function (req, res) {
-    slidesRepo.getAllPromos(function (err, data) {
+    promosRepo.getAllPromos(function (err, data) {
         if (!err) {
             return res.send(data);
         } else {
