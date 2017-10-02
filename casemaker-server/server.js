@@ -154,17 +154,22 @@ app.get('/api/services', function (req, res) {
 });
 
 app.get('/api/images', function (req, res) {
-    if (fs.lstatSync('images\/storage\/' + req.query.imageUrl)) {
-        var img = fs.readFileSync('images\/storage\/' + req.query.imageUrl);
-        res.writeHead(200, {
-            'Content-Type': req.query.imageType
-        });
-        res.end(img, 'binary');
-    }
-    else {
-        var img = fs.readFileSync('images\/storage\/empty-image.jpg');
-        res.writeHead(200, {'Content-Type': req.query.imageType});
-        res.end(img, 'binary');
+    try {
+        if (fs.lstatSync('images\/storage\/' + req.query.imageUrl)) {
+            var img = fs.readFileSync('images\/storage\/' + req.query.imageUrl);
+            res.writeHead(200, {
+                'Content-Type': req.query.imageType
+            });
+            res.end(img, 'binary');
+        }
+        else {
+            var img = fs.readFileSync('images\/storage\/empty-image.jpg');
+            res.writeHead(200, {'Content-Type': req.query.imageType});
+            res.end(img, 'binary');
+        }
+    } catch (ex) {
+        res.writeHead(404);
+        res.end();
     }
 });
 
