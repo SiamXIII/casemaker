@@ -16,6 +16,7 @@ var app = express();
 var waresRepo = require('./repos/ware-repo.js')();
 var categoriesRepo = require('./repos/category-repo')();
 var slidesRepo = require('./repos/slides-repo')();
+var promosRepo = require('./repos/promos-repo')();
 var ordersRepo = require('./repos/order-repo')();
 var servicesRepo = require('./repos/service-repo')();
 
@@ -129,8 +130,8 @@ app.get('/api/slides', function (req, res) {
     });
 });
 
-app.get('/api/services', function (req, res) {
-    servicesRepo.getAllServices(function (err, data) {
+app.get('/api/promos', function (req, res) {
+    slidesRepo.getAllPromos(function (err, data) {
         if (!err) {
             return res.send(data);
         } else {
@@ -217,6 +218,14 @@ app.post('/api/slides', function (req, res) {
     });
 });
 
+app.post('/api/promos', function (req, res) {
+    var item = req.body;
+
+    slidesRepo.savePromo(item, function (result) {
+        res.send(result);
+    });
+});
+
 app.post('/api/services', function (req, res) {
     var item = req.body;
 
@@ -278,8 +287,8 @@ app.delete('/api/slides', function (req, res) {
     });
 });
 
-app.delete('/api/services', function (req, res) {
-    servicesRepo.deleteService(req.query.id, function () {
+app.delete('/api/promos', function (req, res) {
+    servicesRepo.deletePromo(req.query.id, function () {
         res.send('Success');
     });
 });
