@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic);
 
-@import "header";
 @import "../foundation/app";
+@import "overrides";
+
+@import "header";
+@import "main-page";
 @import "catalog";
 @import "news";
 @import "extras";
@@ -18,11 +21,6 @@ body {
   font-family: 'Open Sans', sans-serif !important;
 }
 
-
-button {
-  margin: 10px;
-}
-
 .main-wrapper {
   width: 100%;
   max-width: 1200px;
@@ -30,10 +28,12 @@ button {
 
   .flexslider {
     border: none;
+
+    .flex-direction-nav a:before {
+      line-height: 40px;
+    }
   }
 }
-
-
 
 footer {
   padding-top: 30px;

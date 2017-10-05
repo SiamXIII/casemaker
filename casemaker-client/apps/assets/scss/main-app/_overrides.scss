@@ -1,0 +1,28 @@
+.row {
+  max-width: none;
+
+  .columns {
+    padding: 0;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  color: darken($primary-color, 30%);
+  margin-bottom: 20px;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+
+body {
+  color: $primary-color;
+}
+
+button {
+  margin: 0;
+  border: solid 2px $primary-color;
+  border-radius: 5px;
+  color: $primary-color;
+  background: white;
+}
