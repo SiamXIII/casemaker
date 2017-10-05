@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 var Service = new Schema({
     '_id': Schema.ObjectId,
     'title': String,
+    'description': String,
     'imageUrl': String,
     'imageType': String,
     'link': String

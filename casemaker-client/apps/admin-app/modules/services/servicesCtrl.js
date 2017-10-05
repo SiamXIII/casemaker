@@ -13,6 +13,7 @@ angular.module('casemaker-admin')
                 columnDefs: [
                     {name: '_id', visible: false},
                     {name: 'title', enableCellEditOnFocus: false, displayName: 'Заголовок'},
+                    {name: 'description', enableCellEditOnFocus: false, displayName: 'Описание'},
                     {name: 'link', enableCellEditOnFocus: false, displayName: 'Ссылка'}
                 ],
                 columnVirtualizationThreshold: 20,
