@@ -6184,7 +6184,9 @@ header {
   margin-bottom: 30px; }
 
 .main-page .services {
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px; }
   .main-page .services li:nth-child(1) .info {
     background-color: #c620a1; }
   .main-page .services li:nth-child(2) .info {

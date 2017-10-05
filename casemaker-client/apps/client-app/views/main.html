@@ -29,57 +29,12 @@
         </div>
 
         <ul class="services medium-block-grid-3">
-            <li>
-                <a class="tile">
-                    <img src="https://i.ytimg.com/vi/ktlQrO2Sifg/maxresdefault.jpg"/>
+            <li ng-repeat="service in services">
+                <a class="tile" ng-href="{{:: service.link }}">
+                    <img ng-src="{{::getImageUrl(service.imageUrl)}}"/>
                     <div class="info">
-                        <div class="title">Заголовок</div>
-                        <div class="description">Описание</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="tile">
-                    <img src="https://i.ytimg.com/vi/ktlQrO2Sifg/maxresdefault.jpg"/>
-                    <div class="info">
-                        <div class="title">Заголовок</div>
-                        <div class="description">Описание</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="tile">
-                    <img src="https://i.ytimg.com/vi/ktlQrO2Sifg/maxresdefault.jpg"/>
-                    <div class="info">
-                        <div class="title">Заголовок</div>
-                        <div class="description">Описание</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="tile">
-                    <img src="https://i.ytimg.com/vi/ktlQrO2Sifg/maxresdefault.jpg"/>
-                    <div class="info">
-                        <div class="title">Заголовок</div>
-                        <div class="description">Описание</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="tile">
-                    <img src="https://i.ytimg.com/vi/ktlQrO2Sifg/maxresdefault.jpg"/>
-                    <div class="info">
-                        <div class="title">Заголовок</div>
-                        <div class="description">Описание</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="tile">
-                    <img src="https://i.ytimg.com/vi/ktlQrO2Sifg/maxresdefault.jpg"/>
-                    <div class="info">
-                        <div class="title">Заголовок</div>
-                        <div class="description">Описание</div>
+                        <div class="title">{{:: service.title }}</div>
+                        <div class="description">{{:: service.description }}</div>
                     </div>
                 </a>
             </li>
