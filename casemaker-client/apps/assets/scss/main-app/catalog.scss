@@ -1,36 +1,5 @@
 $catalog-title-color: rgba(0, 0, 0, 0.7);
 $catalog-title-text-color: white;
-$primary-color: #9400D3;
-
-@mixin fade() {
-  &.ng-move,
-  &.ng-enter,
-  &.ng-leave {
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-  }
-
-  &.ng-enter-stagger {
-    transition-delay: 0.2s;
-    animation-delay: 0.2s;
-  }
-
-  &.ng-leave.ng-leave-active,
-  &.ng-move,
-  &.ng-enter {
-    opacity: 0;
-    -webkit-transform: translate(20px, 0);
-    transform: translate(20px, 0);
-  }
-
-  &.ng-leave,
-  &.ng-move.ng-move-active,
-  &.ng-enter.ng-enter-active {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
 
 .catalog {
   @include fade();

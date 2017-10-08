@@ -90,4 +90,113 @@
       }
     }
   }
+
+  .about {
+    &-tabs {
+
+    }
+
+    &-tab {
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+      border-bottom: solid 1px $secondary-color;
+      font-family: $main-font-light;
+
+      &:hover {
+        border-bottom: solid 1px $primary-color;
+
+        .tab-number {
+          background-color: $primary-color;
+        }
+
+        .tab-text {
+          color: $primary-color;
+        }
+      }
+
+      &.selected {
+        border-bottom: solid 2px $accent-color;
+
+        .about-tab-number {
+          background-color: $accent-color;
+        }
+      }
+
+      &-number,
+      &-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &-number {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        font-size: 16px;
+        color: white;
+      }
+
+      &-text {
+        font-size: 24px;
+      }
+    }
+
+    &-page {
+      padding: 30px 10px;
+    }
+
+    h5 {
+      color: $accent-color;
+    }
+  }
+
+  .promos {
+    @include fade();
+
+    margin: 20px 0;
+
+    &-pagination {
+      &-prev,
+      &-next {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+
+        &:before {
+          display: block;
+          line-height: 23px;
+          height: 30px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: darken($primary-color, 30%);
+        }
+
+        &:active {
+          color: $accent-color;
+        }
+      }
+
+      &-prev {
+
+        &:before {
+          content: '\2039';
+        }
+      }
+
+      &-next {
+
+        &:before {
+          content: '\203A';
+        }
+      }
+    }
+  }
 }

@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic);
-
 @import "../foundation/app";
 @import "overrides";
-
+@import "mixins";
 @import "header";
 @import "main-page";
 @import "catalog";
@@ -10,8 +9,6 @@
 @import "extras";
 
 $slider-title-color: rgba(0, 0, 0, 0.7);
-$primary-color: #9400D3;
-$secondary-color: #eaeaea;
 
 html {
   overflow-x: hidden;
@@ -36,56 +33,34 @@ body {
 }
 
 footer {
-  padding-top: 30px;
-  background-color: $secondary-color;
+  background-color: #636466;
+  padding: 30px;
 
-  .phones {
-    .phone {
-      &:before {
-        margin-right: 5px;
-        background-size: contain;
-        position: relative;
-        top: 3px;
-      }
+  h4, h5, li, a, span, div {
+    color: white;
+  }
 
-      &.velcom.gray:before {
-        content: url('../../../../images/velcom-gray.png');
-      }
+  h4, h5, ul {
+    margin: 0 !important;
+  }
 
-      &.mts.gray:before {
-        content: url('../../../../images/mts-gray.png');
-      }
+  h4, h5 {
+    font-weight: normal;
+  }
 
-      &.home.gray:before {
-        content: url('../../../../images/home-gray.png');
-      }
+  h5 {
+    font-size: 20px;
+  }
+
+  a {
+    &:hover {
+      color: $accent-color;
     }
   }
 
-  .payments {
-    .payment {
-      width: 80px;
-      height: 32px;
-      overflow: hidden;
-      background-position: 0 32px;
-
-      &:hover {
-        background-position: 0 0;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .social {
-    .social-link {
-      width: 32px;
-      height: 32px;
-      background-position: 0 32px;
-
-      &:hover {
-        background-position: 0 0;
-        cursor: pointer;
-      }
+  .footer-block {
+    ul {
+      font-size: 16px;
     }
   }
 }

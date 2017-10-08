@@ -40,4 +40,95 @@
             </li>
         </ul>
     </div>
+
+    <div class="section about">
+        <ul class="about-tabs medium-block-grid-3">
+            <li class="about-tab" ng-click="aboutTab = 'design'"
+                ng-class="{ 'selected': aboutTab === 'design' || !aboutTab }">
+                <span class="about-tab-number">1</span><span class="about-tab-text">Дизайн</span>
+            </li>
+            <li class="about-tab" ng-click="aboutTab = 'print'"
+                ng-class="{ 'selected': aboutTab === 'print' }">
+                <span class="about-tab-number">2</span><span class="about-tab-text">Печать</span>
+            </li>
+            <li class="about-tab" ng-click="aboutTab = 'shipping'"
+                ng-class="{ 'selected': aboutTab === 'shipping' }">
+                <span class="about-tab-number">3</span><span class="about-tab-text">Доставка</span>
+            </li>
+        </ul>
+        <div ng-switch="aboutTab" class="about-page">
+            <div class="row" ng-switch-when="print">
+                <div class="medium-3 columns text-center">
+                    <img src="/casemaker-client/images/about/print.png">
+                </div>
+                <div class="medium-9 columns description">
+                    <h4>Современный дизайн!</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="row" ng-switch-when="shipping">
+                <div class="medium-3 columns text-center">
+                    <img src="/casemaker-client/images/about/shipping.png">
+                </div>
+                <div class="medium-9 columns description">
+                    <h4>Современный дизайн!</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="row" ng-switch-default>
+                <div class="medium-3 columns text-center">
+                    <img src="/casemaker-client/images/about/design.png">
+                </div>
+                <div class="medium-9 columns description">
+                    <h5>Современный дизайн!</h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section promo">
+        <h4>Акции и скидки</h4>
+        <div>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+            sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+            ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+            nulla pariatur?
+        </div>
+
+        <div class="promos">
+            <ul class="medium-block-grid-4">
+                <li class="text-center"
+                    ng-repeat="promo in promosPageArray">
+                    <a ng-href="{{ promo.url }}">
+                        <img ng-src="{{::getImageUrl(promo.imageUrl, promo.imageType)}}"/>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="promos-pagination text-right">
+                <div class="promos-pagination-prev"
+                     ng-click="promosPrevPage()"></div>
+                <div class="promos-pagination-next"
+                     ng-click="promosNextPage()"></div>
+            </div>
+        </div>
+    </div>
 </div>

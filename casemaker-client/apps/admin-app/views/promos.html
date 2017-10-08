@@ -1,7 +1,7 @@
 <button data-ng-click="showAdd()">Добавить</button>
 
-<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3" ng-if="data.length">
-    <li ng-repeat="image in data">
+<ul class="small-block-grid-2 medium-block-grid-6 large-block-grid-8" ng-if="data.length">
+    <li class="text-center" ng-repeat="image in data">
         <div class="image-tile">
             <img ng-src="{{::getImageUrl(image.imageUrl, image.imageType)}}">
 
@@ -14,8 +14,8 @@
     <div class="underlay" data-ng-click="hideAdd()"></div>
     <div class="panel over">
         <form data-ng-submit="addItem()" id="editForm">
-            <label class="left">Название</label>
-            <input type="text" data-ng-model="add.name" required>
+            <label class="left">Ссылка</label>
+            <input type="text" data-ng-model="add.url">
 
             <label class="left">Изображение</label>
             <input type="file" oi-file="options">

@@ -5,8 +5,9 @@ var Schema = mongoose.Schema;
 var Promo = new Schema({
     '_id': Schema.ObjectId,
     'name': String,
+    'url': String,
     'imageUrl': String,
-    'imageType': String,
+    'imageType': String
 });
 
 module.exports = mongoose.model('Promo', Promo);

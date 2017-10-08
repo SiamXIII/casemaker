@@ -6224,6 +6224,79 @@ header {
       .main-page .services .tile:hover .info .description {
         display: block; }
 
+.main-page .about-tab {
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border-bottom: solid 1px #eaeaea;
+  font-family: "Open Sans Light"; }
+  .main-page .about-tab:hover {
+    border-bottom: solid 1px #aaa; }
+    .main-page .about-tab:hover .tab-number {
+      background-color: #aaa; }
+    .main-page .about-tab:hover .tab-text {
+      color: #aaa; }
+  .main-page .about-tab.selected {
+    border-bottom: solid 2px #d136ae; }
+    .main-page .about-tab.selected .about-tab-number {
+      background-color: #d136ae; }
+  .main-page .about-tab-number, .main-page .about-tab-text {
+    display: inline-block;
+    vertical-align: middle; }
+  .main-page .about-tab-number {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #aaa;
+    font-size: 16px;
+    color: white; }
+  .main-page .about-tab-text {
+    font-size: 24px; }
+
+.main-page .about-page {
+  padding: 30px 10px; }
+
+.main-page .about h5 {
+  color: #d136ae; }
+
+.main-page .promos {
+  margin: 20px 0; }
+  .main-page .promos.ng-move, .main-page .promos.ng-enter, .main-page .promos.ng-leave {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .main-page .promos.ng-enter-stagger {
+    transition-delay: 0.2s;
+    animation-delay: 0.2s; }
+  .main-page .promos.ng-leave.ng-leave-active, .main-page .promos.ng-move, .main-page .promos.ng-enter {
+    opacity: 0;
+    -webkit-transform: translate(20px, 0);
+    transform: translate(20px, 0); }
+  .main-page .promos.ng-leave, .main-page .promos.ng-move.ng-move-active, .main-page .promos.ng-enter.ng-enter-active {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  .main-page .promos-pagination-prev, .main-page .promos-pagination-next {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center; }
+    .main-page .promos-pagination-prev:before, .main-page .promos-pagination-next:before {
+      display: block;
+      line-height: 23px;
+      height: 30px; }
+    .main-page .promos-pagination-prev:hover, .main-page .promos-pagination-next:hover {
+      cursor: pointer;
+      color: #5e5d5d; }
+    .main-page .promos-pagination-prev:active, .main-page .promos-pagination-next:active {
+      color: #d136ae; }
+  .main-page .promos-pagination-prev:before {
+    content: '\2039'; }
+  .main-page .promos-pagination-next:before {
+    content: '\203A'; }
+
 .catalog {
   min-height: 600px; }
   .catalog.ng-move, .catalog.ng-enter, .catalog.ng-leave {
@@ -6273,7 +6346,7 @@ header {
           cursor: pointer;
           opacity: 0.8; }
           .catalog .catalog-tile .catalog-tile-underlay .catalog-tile-wrapper:hover .catalog-tile-title {
-            color: #9400D3; }
+            color: #aaa; }
 
 .ware {
   min-height: 600px; }
@@ -6292,12 +6365,12 @@ header {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
   .ware h2 {
-    color: #9400D3;
+    color: #aaa;
     margin-left: 20px; }
   .ware .ware-price {
     font-size: 1.6em;
     font-weight: bold;
-    color: #9400D3; }
+    color: #aaa; }
   .ware .thumbnails {
     margin: 10px;
     list-style-type: none; }
@@ -6369,7 +6442,7 @@ news-item .news-wrapper {
       line-height: 0;
       opacity: 0; }
     news-item .news-wrapper .news-info .news-info-link {
-      color: #9400D3; }
+      color: #aaa; }
 
 .instagram-tile h4 {
   padding: 2px 10px; }
@@ -6390,31 +6463,17 @@ body {
       line-height: 40px; }
 
 footer {
-  padding-top: 30px;
-  background-color: #eaeaea; }
-  footer .phones .phone:before {
-    margin-right: 5px;
-    background-size: contain;
-    position: relative;
-    top: 3px; }
-  footer .phones .phone.velcom.gray:before {
-    content: url("../../../../images/velcom-gray.png"); }
-  footer .phones .phone.mts.gray:before {
-    content: url("../../../../images/mts-gray.png"); }
-  footer .phones .phone.home.gray:before {
-    content: url("../../../../images/home-gray.png"); }
-  footer .payments .payment {
-    width: 80px;
-    height: 32px;
-    overflow: hidden;
-    background-position: 0 32px; }
-    footer .payments .payment:hover {
-      background-position: 0 0;
-      cursor: pointer; }
-  footer .social .social-link {
-    width: 32px;
-    height: 32px;
-    background-position: 0 32px; }
-    footer .social .social-link:hover {
-      background-position: 0 0;
-      cursor: pointer; }
+  background-color: #636466;
+  padding: 30px; }
+  footer h4, footer h5, footer li, footer a, footer span, footer div {
+    color: white; }
+  footer h4, footer h5, footer ul {
+    margin: 0 !important; }
+  footer h4, footer h5 {
+    font-weight: normal; }
+  footer h5 {
+    font-size: 20px; }
+  footer a:hover {
+    color: #d136ae; }
+  footer .footer-block ul {
+    font-size: 16px; }
