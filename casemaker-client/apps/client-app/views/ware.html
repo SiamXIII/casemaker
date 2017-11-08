@@ -12,13 +12,13 @@
 
 <h2>{{::ware.name}}</h2>
 
-<div>
+<div class="ware">
     <img ng-src="{{::getImageUrl(ware.imageUrl)}}" ng-if="ware.imageUrl" class="column large-4">
 
-    <div class="column large-8 small-12">
+    <div class="column large-8 small-12 info">
         <div>{{::ware.description}}</div>
         <div class="right">
-            <label class="ware-price text-right">Цена: {{::ware.price}} руб.</label>
+            <label class="ware-price text-right price">Цена: {{::ware.price}} руб.</label>
             <button class="column large-12" data-ng-click="designWare()" data-ng-if="ware.isDesignable">
                 Дизайн
             </button>

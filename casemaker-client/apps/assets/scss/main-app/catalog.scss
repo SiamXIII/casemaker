@@ -9,9 +9,12 @@ $catalog-title-text-color: white;
     @include fade();
 
     position: relative;
+    border-radius: 10px;
+
 
     .catalog-tile-underlay {
       background-color: black;
+      border-radius: 10px;
 
       .catalog-tile-wrapper {
         display: inline-block;
@@ -25,6 +28,11 @@ $catalog-title-text-color: white;
           color: $catalog-title-text-color;
           background-color: $catalog-title-color;
           padding: 10px;
+          border-radius: 0 0 10px 10px;
+        }
+
+        img {
+          border-radius: 10px;
         }
 
         &:hover {

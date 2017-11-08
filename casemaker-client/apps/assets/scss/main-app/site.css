@@ -6140,9 +6140,33 @@ header {
   padding-top: 20px; }
   header .part-1,
   header .part-2 {
-    display: inline; }
+    display: inline-block; }
   header .part-1 {
-    width: 70%; }
+    width: 84%; }
+  header .part-2 {
+    width: 15%;
+    vertical-align: top; }
+    header .part-2 .phone,
+    header .part-2 .worktime {
+      display: inline-block;
+      height: 32px;
+      font-weight: bold;
+      font-size: 15px; }
+      header .part-2 .phone:before,
+      header .part-2 .worktime:before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        background-repeat: no-repeat; }
+    header .part-2 .phone:before {
+      background-image: url("/casemaker-client/images/phone.png");
+      height: 25px;
+      margin-top: -2px; }
+    header .part-2 .worktime:before {
+      background-image: url("/casemaker-client/images/clock.png");
+      height: 26px;
+      margin-top: -2px; }
   header .logo {
     position: relative;
     padding-left: 120px;
@@ -6314,7 +6338,8 @@ header {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
   .catalog .catalog-tile {
-    position: relative; }
+    position: relative;
+    border-radius: 10px; }
     .catalog .catalog-tile.ng-move, .catalog .catalog-tile.ng-enter, .catalog .catalog-tile.ng-leave {
       -webkit-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; }
@@ -6330,7 +6355,8 @@ header {
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0); }
     .catalog .catalog-tile .catalog-tile-underlay {
-      background-color: black; }
+      background-color: black;
+      border-radius: 10px; }
       .catalog .catalog-tile .catalog-tile-underlay .catalog-tile-wrapper {
         display: inline-block;
         position: relative;
@@ -6341,7 +6367,10 @@ header {
           bottom: 0;
           color: white;
           background-color: rgba(0, 0, 0, 0.7);
-          padding: 10px; }
+          padding: 10px;
+          border-radius: 0 0 10px 10px; }
+        .catalog .catalog-tile .catalog-tile-underlay .catalog-tile-wrapper img {
+          border-radius: 10px; }
         .catalog .catalog-tile .catalog-tile-underlay .catalog-tile-wrapper:hover {
           cursor: pointer;
           opacity: 0.8; }
@@ -6410,6 +6439,18 @@ header {
       top: 0;
       margin: 20px auto; }
 
+.ware img {
+  padding: 0; }
+
+.ware .info {
+  padding: 0;
+  padding-left: 20px; }
+  .ware .info .price {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .ware .info button {
+    padding: 10px; }
+
 news-item .news-wrapper {
   position: relative;
   margin-bottom: 15px;
@@ -6472,8 +6513,38 @@ footer {
   footer h4, footer h5 {
     font-weight: normal; }
   footer h5 {
-    font-size: 20px; }
+    font-size: 18px; }
   footer a:hover {
     color: #d136ae; }
   footer .footer-block ul {
-    font-size: 16px; }
+    font-size: 14px; }
+  footer .socials {
+    text-align: center; }
+    footer .socials .facebook,
+    footer .socials .instagram,
+    footer .socials .vk {
+      display: inline-block;
+      width: 49px;
+      height: 32px;
+      margin-right: 5px;
+      background-repeat: no-repeat; }
+    footer .socials .facebook {
+      background-image: url("/casemaker-client/images/logos/f.png"); }
+      footer .socials .facebook:hover {
+        background-image: url("/casemaker-client/images/logos/f-2.png"); }
+      footer .socials .facebook:active {
+        background-image: url("/casemaker-client/images/logos/f-3.png"); }
+    footer .socials .instagram {
+      background-image: url("/casemaker-client/images/logos/i.png"); }
+      footer .socials .instagram:hover {
+        background-image: url("/casemaker-client/images/logos/i-2.png"); }
+      footer .socials .instagram:active {
+        background-image: url("/casemaker-client/images/logos/i-3.png"); }
+    footer .socials .vk {
+      background-image: url("/casemaker-client/images/logos/v.png"); }
+      footer .socials .vk:hover {
+        background-image: url("/casemaker-client/images/logos/v-2.png"); }
+      footer .socials .vk:active {
+        background-image: url("/casemaker-client/images/logos/v-3.png"); }
+  footer .copyright {
+    font-size: 14px; }

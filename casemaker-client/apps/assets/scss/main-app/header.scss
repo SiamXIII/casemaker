@@ -3,14 +3,48 @@ header {
 
   .part-1,
   .part-2 {
-    display: inline;
+    display: inline-block;
   }
 
   .part-1 {
-    width: 70%;
+    width: 84%;
   }
 
   .part-2 {
+    width: 15%;
+    vertical-align: top;
+
+    .phone,
+    .worktime {
+      display: inline-block;
+      height: 32px;
+      font-weight: bold;
+      font-size: 15px;
+
+      &:before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .phone {
+      &:before {
+        background-image: url('/casemaker-client/images/phone.png');
+        height: 25px;
+        margin-top: -2px;
+      }
+    }
+
+    .worktime {
+      &:before {
+        background-image: url('/casemaker-client/images/clock.png');
+        height: 26px;
+        margin-top: -2px;
+      }
+    }
   }
 
   .logo {
