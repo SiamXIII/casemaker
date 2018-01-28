@@ -1,0 +1,7 @@
+<div class="{{ sliderClass }}">
+    <div class="sangar-content" ng-repeat="image in images track by $index">
+        <img ng-src="{{::getImageUrl(image.imageUrl, image.imageType)}}"/>
+
+        <a href='http://google.com' target="_blank">{{::image.name}}</a>
+    </div>
+</div>

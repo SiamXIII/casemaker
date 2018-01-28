@@ -11,8 +11,14 @@
     <link href="/casemaker-client/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/casemaker-client/bower_components/ngDialog/css/ngDialog.min.css" rel="stylesheet">
     <link href="/casemaker-client/bower_components/ngDialog/css/ngDialog-theme-default.min.css" rel="stylesheet">
+    <link href="/casemaker-client/bower_components/sangar-slider/dist/css/sangarSlider.css" rel="stylesheet">
+    <link href="/casemaker-client/bower_components/sangar-slider/dist/themes/default/default.css" rel="stylesheet">
+    <link href="/casemaker-client/bower_components/sangar-slider/dist/themes/dark/dark.css" rel="stylesheet">
 
     <script src="/casemaker-client/common/scripts/jquery.min.js"></script>
+    <script src="/casemaker-client/bower_components/sangar-slider/dist/lib/jquery.touchSwipe.min.js"></script>
+    <script src="/casemaker-client/bower_components/sangar-slider/dist/lib/imagesloaded.min.js"></script>
+    <script src="/casemaker-client/bower_components/sangar-slider/dist/js/sangarSlider.js"></script>
     <script src="/casemaker-client/bower_components/flexslider/jquery.flexslider-min.js"></script>
     <script src="/casemaker-client/common/scripts/foundation.min.js"></script>
     <script src="/casemaker-client/bower_components/angular/angular.js"></script>
@@ -34,6 +40,7 @@
 
     <script src="/casemaker-client/apps/client-app/modules/header/header.js"></script>
     <script src="/casemaker-client/apps/client-app/modules/slider/slider.js"></script>
+    <script src="/casemaker-client/apps/client-app/modules/slider/sangar-slider.js"></script>
     <script src="/casemaker-client/apps/client-app/modules/catalog/catalogCtrl.js"></script>
     <script src="/casemaker-client/apps/client-app/modules/catalog/categoryCtrl.js"></script>
     <script src="/casemaker-client/apps/client-app/modules/catalog/wareCtrl.js"></script>
@@ -48,12 +55,12 @@
 
 <div class="main-wrapper">
     <main-header></main-header>
+</div>
 
-    <main-slider></main-slider>
+<div data-ng-view=""></div>
 
-    <div data-ng-view=""></div>
-
-    <footer>
+<footer>
+    <div class="main-wrapper">
         <ul class="medium-block-grid-4">
             <li class="footer-block">
                 <h5>О нас</h5>
@@ -100,7 +107,7 @@
         <div class="copyright text-center">
             Copyright &#9400; 2017 casemaker.by Minsk
         </div>
-    </footer>
-</div>
+    </div>
+</footer>
 </body>
 </html>

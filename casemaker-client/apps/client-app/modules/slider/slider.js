@@ -4,16 +4,10 @@ angular.module('casemaker')
             restrict: 'E',
             templateUrl: '/casemaker-client/apps/client-app/views/slider.html',
             scope: {},
-            controller: function ($scope, Slides, ImagesService) {
+            controller: function ($scope, Slides) {
                 $scope.images = Slides.get();
-
-                $scope.getImageUrl = ImagesService.getImageUrl;
-
-                $scope.setHeight = function () {
-                    $('.top-slider').height($('.top-slider').width() / 1920 * 600 + 'px');
-                }
             }
-        }
+        };
     });
 
 

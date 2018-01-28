@@ -12,7 +12,8 @@
     "angular-animate": "~1.4.4",
     "underscore": "~1.8.3",
     "components-font-awesome": "~4.4.0",
-    "ngDialog": "~0.5.1"
+    "ngDialog": "~0.5.1",
+    "sangar-slider": "^1.2.0"
   },
   "exportsOverride": {
     "bootstrap": {
