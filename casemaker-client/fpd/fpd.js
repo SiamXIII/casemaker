@@ -2,7 +2,7 @@ angular.module('casemaker')
     .directive('fpd', function () {
         return {
             restrict: "E",
-            templateUrl: "fpd/fpd.html",
+            templateUrl: "/casemaker-client/fpd/fpd.html",
             scope: {
                 ware: '@',
                 overlay: '@',
@@ -18,7 +18,7 @@ angular.module('casemaker')
                     var width = $('#designer').width();
 
                     var yourDesigner = $('#case-designer').fancyProductDesigner({
-                        templatesDirectory: 'fpd/templates/',
+                        templatesDirectory: '/casemaker-client/fpd/templates/',
                         width: width,
                         fonts: ['Arial', 'Fearless', 'Helvetica', 'Times New Roman', 'Verdana', 'Geneva', 'Gorditas'],
                         customTextParameters: {
