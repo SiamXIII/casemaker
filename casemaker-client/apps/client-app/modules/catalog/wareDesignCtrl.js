@@ -1,6 +1,7 @@
 angular.module('casemaker')
     .controller('wareDesignCtrl', function ($scope, $location, $routeParams, Wares, ImagesService, CONFIG) {
         $scope.wareKey = $routeParams.ware;
+        $scope.order = {};
 
         Wares.query({params: $scope.wareKey}).$promise
             .then(function (data) {

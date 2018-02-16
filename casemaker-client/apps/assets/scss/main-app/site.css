@@ -6451,6 +6451,9 @@ header {
   .ware .info button {
     padding: 10px; }
 
+#designer button {
+  margin-left: 10px; }
+
 news-item .news-wrapper {
   position: relative;
   margin-bottom: 15px;

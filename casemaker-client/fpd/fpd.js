@@ -1,3 +1,69 @@
+var labels = { //different labels used for the UI
+    layersButton: 'Управление слоями',
+    addsButton: 'Добавить что-нибудь',
+    moreButton: 'Действия',
+    productsButton: 'Сменить товары',
+    downloadImage: 'Скачать изображение',
+    print: 'Печать',
+    downLoadPDF: 'Скачать PDF',
+    saveProduct: 'Сохранить ',
+    loadProduct: 'Загрузка',
+    undoButton: 'Отменить действие',
+    redoButton: 'Вернуть действие',
+    resetProductButton: 'Сбросить товар',
+    zoomButton: 'Приближение',
+    panButton: 'Расположение',
+    addImageButton: 'Добавить свое изображение',
+    addTextButton: 'Добавить свой текст',
+    enterText: 'Введите свой текст',
+    addFBButton: 'Добавить фото с Facebook',
+    addInstaButton: 'Добавить фото с Instagram',
+    addDesignButton: 'Выбрать из готовых дизайнов',
+    fillOptions: 'Настройки заполнения',
+    color: 'Цвет',
+    patterns: 'Узоры',
+    opacity: 'Прозрачность',
+    filter: 'Фильтр',
+    textOptions: 'Настройки текста',
+    changeText: 'Сменить текст',
+    typeface: 'Шрифт',
+    lineHeight: 'Высота строки',
+    textAlign: 'Выравнивание',
+    textAlignLeft: 'По левому краю',
+    textAlignCenter: 'По центру',
+    textAlignRight: 'По правому краю',
+    textStyling: 'Стилизация',
+    bold: 'Жирный',
+    italic: 'Курсив',
+    underline: 'Подчеркивание',
+    curvedText: 'Изогнутый текст',
+    curvedTextSpacing: 'Расстояние между буквами',
+    curvedTextRadius: 'Радиус',
+    curvedTextReverse: 'Реверс',
+    transform: 'Преобразование',
+    angle: 'Угол',
+    scale: 'Масштаб',
+    centerH: 'Горизонтальное выравнивание',
+    centerV: 'Вертикальное выравнивание',
+    flipHorizontal: 'Горизонтальный переворот',
+    flipVertical: 'Вертикальный переворот',
+    resetElement: 'Сбросить элемент',
+    fbSelectAlbum: 'Выбрать альбом',
+    instaFeedButton: 'Моя лента',
+    instaRecentImagesButton: 'Мои недавние изображения',
+    editElement: 'Редактировать элемент',
+    productSaved: 'Товар сохранен!',
+    lock: 'Заблокировать',
+    unlock: 'Разблокировать',
+    remove: 'Убрать',
+    outOfContainmentAlert: 'Верните в область контейнеа!',
+    uploadedDesignSizeAlert: "Превышен размер изображения.",
+    initText: "Загрузка",
+    myUploadedImgCat: "Ваши загруженные изображения",
+    moveUp: 'Переместить вверх',
+    moveDown: 'Переместить вниз'
+};
+
 angular.module('casemaker')
     .directive('fpd', function () {
         return {
@@ -13,7 +79,6 @@ angular.module('casemaker')
                 order: '='
             },
             link: function ($scope, $http) {
-
                 jQuery(document).ready(function () {
                     var width = $('#designer').width();
 
@@ -40,7 +105,8 @@ angular.module('casemaker')
                             boundingBoxClipping: true,
                             zChangeable: true,
                             autoSelect: true
-                        }
+                        },
+                        labels: labels
                     }).data('fancy-product-designer');
 
                     $scope.save = function () {
