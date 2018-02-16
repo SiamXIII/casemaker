@@ -1,7 +1,7 @@
 <div id="designer" class="panel full over clearfix">
-    <fpd ng-if="ware" ware="{{::getImageUrl(ware.wareUrl)}}"
-         overlay="{{::getImageUrl(ware.overlayUrl)}}"
-         details="{{::getImageUrl(ware.detailsUrl)}}"
+    <fpd ng-if="wareUrl && overlayUrl && detailsUrl" ware="{{ wareUrl }}"
+         overlay="{{ overlayUrl }}"
+         details="{{ detailsUrl }}"
          hide-form="hideForm()"
          server-url="{{serverUrl}}"
          show-order-form="showOrderForm()"

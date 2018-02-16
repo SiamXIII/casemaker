@@ -7,13 +7,15 @@ angular.module('casemaker')
                 $scope.ware = data.ware;
 
                 document.title = 'casemaker.by - ' + $scope.ware.name;
+
+                $scope.wareUrl = ImagesService.getImageUrl($scope.ware.wareUrl);
+                $scope.overlayUrl = ImagesService.getImageUrl($scope.ware.overlayUrl);
+                $scope.detailsUrl = ImagesService.getImageUrl($scope.ware.detailsUrl);
             });
 
         $scope.orderVisible = false;
         $scope.serverUrl = CONFIG.serverUrl;
         $scope.imageId = '';
-
-        $scope.getImageUrl = ImagesService.getImageUrl;
 
         $scope.showOrderForm = function () {
             $scope.orderVisible = true;

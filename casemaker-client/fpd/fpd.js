@@ -133,7 +133,7 @@ angular.module('casemaker')
                     };
                 });
             }
-        }
+        };
 
         function guid() {
             function _p8(s) {
